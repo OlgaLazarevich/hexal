@@ -1,0 +1,297 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.main-header {
+  width: 100%;
+  position: relative;
+}
+
+.main-header:before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  display: block;
+  width: 100%;
+  height: 63px;
+  background: #323232;
+}
+
+.main-menu {
+  position: relative;
+  display: flex;
+  height: 74px;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.main-menu__link {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 10px;
+  font-family: sans-serif;
+  text-decoration: none;
+}
+
+.main-menu__home {
+  position: relative;
+  width: 90px;
+  height: 74px;
+  background-image: url('../assets/img/logo.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: 1000;
+}
+
+.main-menu__home:before {
+  position: absolute;
+  top: 63px;
+  display: flex;
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 25px 45px 0 45px;
+  border-color: #323232 transparent transparent transparent;
+  z-index: 2000;
+}
+
+:root {
+  --hexagon-container-width: 1000px;
+  --hexagon-width: 180px;
+  --hexagon-margin: 10px;
+}
+
+.hexagon-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: var(--hexagon-container-width);
+  margin: auto;
+  margin-top: 4.5%;
+  overflow: hidden;
+}
+
+.hexagon {
+  position: relative;
+  width: var(--hexagon-width);
+  height: 210px;
+  margin: var(--hexagon-margin);
+  transform: rotate(120deg);
+  overflow: hidden;
+  visibility: hidden;
+  animation: eye 3s ease-in-out infinite;
+  -webkit-animation: eye 3s ease-in-out infinite;
+}
+
+.hex-layer-1 {
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  transform: rotate(-60deg);
+  overflow: hidden;
+}
+
+.hex-layer-2 {
+  width: 100%;
+  height: 100%;
+  background: rgba(226, 118, 118, 0.43);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 120%;
+  transform: rotate(-60deg);
+  overflow: hidden;
+  visibility: visible;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+}
+
+.hexagon:first-of-type {
+  margin-left: 110px;
+}
+
+.hexagon:nth-of-type(n+5):nth-of-type(-n+9) {
+  top: -60px;
+}
+
+.hexagon:nth-of-type(n+10):nth-of-type(-n+13) {
+  top: -120px;
+}
+
+.hexagon:nth-of-type(n+10):nth-of-type(-n+10) {
+  margin-left: 110px;
+}
+
+.hexagon:nth-of-type(1) .hex-layer-2 {
+  background-image: url(../assets/img/i1.jpg);
+}
+
+.hexagon:nth-of-type(2) .hex-layer-2 {
+  background-image: url(../assets/img/i2.jpg);
+}
+
+.hexagon:nth-of-type(3) .hex-layer-2 {
+  background-image: url(../assets/img/i3.jpg);
+}
+
+.hexagon:nth-of-type(4) .hex-layer-2 {
+  background-image: url(../assets/img/i4.jpg);
+}
+
+.hexagon:nth-of-type(5) .hex-layer-2 {
+  background-image: url(../assets/img/i5.jpg);
+}
+
+.hexagon:nth-of-type(6) .hex-layer-2 {
+  background-image: url(../assets/img/i6.jpg);
+}
+
+.hexagon:nth-of-type(7) .hex-layer-2 {
+  background-image: url(../assets/img/i7.jpg);
+}
+
+.hexagon:nth-of-type(8) .hex-layer-2 {
+  background-image: url(../assets/img/i8.jpg);
+}
+
+.hexagon:nth-of-type(9) .hex-layer-2 {
+  background-image: url(../assets/img/i9.jpg);
+}
+
+.hexagon:nth-of-type(10) .hex-layer-2 {
+  background-image: url(../assets/img/i10.jpg);
+}
+
+.hexagon:nth-of-type(11) .hex-layer-2 {
+  background-image: url(../assets/img/i11.jpg);
+}
+
+.hexagon:nth-of-type(12) .hex-layer-2 {
+  background-image: url(../assets/img/i12.jpg);
+}
+
+.hexagon:nth-of-type(13) .hex-layer-2 {
+  background-image: url(../assets/img/i13.jpg);
+}
+
+.hexagon .hex-layer-2:hover {
+  background-size: 140%;
+}
+
+@media screen and (max-width: 992px) {
+   :root {
+    --hexagon-container-width: 750px;
+    --hexagon-width: 130px;
+    --hexagon-margin: 10px;
+  }
+  .hexagon:first-of-type {
+    margin-left: 85px;
+  }
+  .hexagon:nth-of-type(n+5):nth-of-type(-n+9) {
+    top: -100px;
+  }
+  .hexagon:nth-of-type(n+10):nth-of-type(-n+13) {
+    top: -200px;
+  }
+  .hexagon:nth-of-type(n+10):nth-of-type(-n+10) {
+    margin-left: 85px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --hexagon-container-width: 600px;
+    --hexagon-width: 110px;
+    --hexagon-margin: 5px;
+  }
+  .hexagon:first-of-type {
+    margin-left: 65px;
+  }
+  .hexagon:nth-of-type(n+5):nth-of-type(-n+9) {
+    top: -115px;
+  }
+  .hexagon:nth-of-type(n+10):nth-of-type(-n+13) {
+    top: -230px;
+  }
+  .hexagon:nth-of-type(n+10):nth-of-type(-n+10) {
+    margin-left: 65px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+   :root {
+    --hexagon-container-width: 500px;
+    --hexagon-width: 96px;
+    --hexagon-margin: 2px;
+  }
+  .hexagon:first-of-type {
+    margin-left: 53px;
+  }
+  .hexagon:nth-of-type(n+5):nth-of-type(-n+9) {
+    top: -127px;
+  }
+  .hexagon:nth-of-type(n+10):nth-of-type(-n+13) {
+    top: -253px;
+  }
+  .hexagon:nth-of-type(n+10):nth-of-type(-n+10) {
+    margin-left: 53px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+   :root {
+    --hexagon-container-width: 300px;
+  }
+  .hexagon-container {
+    overflow: hidden;
+    max-height: 650px;
+  }
+  .hexagon:nth-of-type(n+5):nth-of-type(-n+9) {
+    top: 0px;
+  }
+  .hexagon:nth-of-type(n+10):nth-of-type(-n+13) {
+    top: 0px;
+  }
+  .hexagon:nth-of-type(n+10):nth-of-type(-n+10) {
+    margin-left: 0px;
+  }
+  .hexagon {
+    width: 96px;
+    height: 210px;
+    margin: 2px;
+  }
+  .hexagon:first-of-type {
+    margin-left: 53px;
+  }
+  .hexagon:nth-of-type(n+3):nth-of-type(-n+5) {
+    top: -125px;
+  }
+  .hexagon:nth-of-type(n+6):nth-of-type(-n+6) {
+    margin-left: 53px;
+  }
+  .hexagon:nth-of-type(n+6):nth-of-type(-n+7) {
+    top: -250px;
+  }
+  .hexagon:nth-of-type(n+8):nth-of-type(-n+10) {
+    top: -377px;
+  }
+  .hexagon:nth-of-type(n+10):nth-of-type(-n+10) {
+    margin-left: 2px;
+  }
+  .hexagon:nth-of-type(n+11):nth-of-type(-n+11) {
+    margin-left: 53px;
+  }
+  .hexagon:nth-of-type(n+11):nth-of-type(-n+12) {
+    top: -503px;
+  }
+  .hexagon:nth-of-type(n+13):nth-of-type(-n+13) {
+    top: -629px;
+    margin-left: 103px;
+  }
+}
