@@ -295,3 +295,97 @@
     margin-left: 103px;
   }
 }
+
+.section-person {
+  background: #2eb398;
+  padding: 70px 0px;
+}
+
+.person {
+  max-width: 780px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 10px;
+  font-family: sans-serif;
+  color:#FFF;
+  height: auto;
+  overflow: hidden;
+}
+
+.hexagon.person__hexagon {
+  margin-left: 0px;
+  margin-top: 0px;
+}
+
+.section-person .person__hexagon .hex-layer-2 {
+  background-image: url(../assets/img/avatar.jpg);
+  background-size: 240%;
+}
+
+.person__figcaption {
+  
+}
+
+.person__name {
+  font-size: 30px;
+}
+.person__profession {
+  color: #20816d;
+  font-size: 18px;
+}
+.person__text {
+  font-size: 12px;
+  line-height: 1.5;
+  display: block;
+  
+}
+
+.person__links {
+  display: flex;
+  justify-content: flex-end;
+  height: 25px
+}
+
+.person__link-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 24px;
+  width: 24px;
+  text-decoration: none;
+  background: #a4dbd4;
+}
+
+.person__link-item i {
+  color: #00ab94;
+}
+
+.person__link-item:nth-of-type(2){
+  background: #6ccbbe;
+}
+
+.person__link-item:nth-of-type(3){
+  background: #80d1c6;
+}
+
+
+.person__link-item:nth-of-type(6){
+  background: #6dcbbe;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
