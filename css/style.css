@@ -47,12 +47,13 @@ body {
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  max-width: 400px;
+  max-width: 390px;
   margin: auto;
   box-sizing: border-box;
 }
 
 .main-menu__link {
+  position: relative;
   display: inline-block;
   color: white;
   text-align: center;
@@ -61,6 +62,24 @@ body {
   font-family: "Lato", "Arial", sans-serif;
   font-weight: bold;
   text-decoration: none;
+    
+}
+
+.link-decor {
+    display: block;
+    width: 2px;
+    height: 2px;
+    background: #484c5f;
+    border-radius: 50%;
+}
+
+.main-menu__link:hover {
+     color: #2eb398;
+}
+
+.main-menu__link-active {
+    
+    color: #2eb398;
 }
 
 .main-menu__home {
@@ -97,7 +116,7 @@ body {
   flex-wrap: wrap;
   width: var(--hexagon-container-width);
   margin: auto;
-  margin-top: 5.5%;
+  margin-top: 4.5%;
   overflow: hidden;
 }
 
